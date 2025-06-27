@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замок Трате - Мультифункциональный комплекс | Императорские конюшни XIX века</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #DAA520;
+            --accent-color: #2F4F2F;
+            --bg-color: #FAF7F0;
+            --text-dark: #3C2415;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #F5F2E8 100%);
+            color: var(--text-dark);
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.6)), 
+                        url('https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/1.jpg') center/cover;
+            min-height: 100vh;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .horse-icon {
+            animation: gallop 3s ease-in-out infinite;
+        }
+        
+        @keyframes gallop {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+        }
+        
+        .golden-border {
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .premium-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .large-image {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-bg flex items-center justify-center text-white">
+        <div class="text-center px-6">
+            <div class="fade-in">
+                <i class="fas fa-crown text-6xl text-yellow-400 mb-6 horse-icon"></i>
+                <h1 class="heading-font text-6xl md:text-8xl font-bold mb-6">ЗАМОК ТРАТЕ</h1>
+                <h2 class="text-2xl md:text-3xl mb-8 font-light">Императорские конюшни XIX века</h2>
+                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed">
+                    Уникальный исторический комплекс на границе с Австрией<br>
+                    Мультифункциональный проект класса люкс
+                </p>
+                <div class="flex justify-center space-x-8 text-center">
+                    <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+                        <div class="counter" data-target="22000">0</div>
+                        <p class="text-lg">м² территории</p>
+                    </div>
+                    <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+                        <div class="counter" data-target="900">0</div>
+                        <p class="text-lg">тыс. € стоимость</p>
+                    </div>
+                    <div class="bg-black bg-opacity-20 p-6 rounded-lg">
+                        <div class="counter" data-target="19">0</div>
+                        <p class="text-lg">век постройки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История и описание -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="heading-font text-5xl font-bold text-gray-800 mb-6">Историческое наследие</h2>
+                    <div class="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        Замок был построен в XIX веке и использовался как королевские конюшни австрийского дворца с отдельным дворцом. 
+                        Общая площадь внутренних помещений составляет более 1,100 м². Прилегающая территория представляла собой 
+                        ботанический сад с тюльпанами и фруктовыми деревьями.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="fade-in">
+                        <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/2.JPG" alt="Исторический замок" class="large-image w-full shadow-2xl">
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-6 text-gray-800">Кадастровая структура</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-semibold">Участок 139/0:</span>
+                                <span>1,064 м² (сельхоз + застройка)</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-semibold">Участок 138/0:</span>
+                                <span>182 м² (сельскохозяйственная)</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-semibold">Участок 141/1:</span>
+                                <span>23,422 м² (сад + сельхоз + лес)</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-semibold">Участок 38/0:</span>
+                                <span>611 м² (застройка)</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span class="font-semibold">Участок 39/0:</span>
+                                <span>1,117 м² (застройка)</span>
+                            </div>
+                            <div class="flex justify-between font-bold text-lg pt-4">
+                                <span>ОБЩАЯ ПЛОЩАДЬ:</span>
+                                <span class="text-yellow-600">26,396 м²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #F5F2E8, #FAF7F0);">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="heading-font text-5xl font-bold text-gray-800 mb-6">Галерея проекта</h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600">Исторические постройки, планы развития и концепции</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in card-hover">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/3.JPG" alt="Конюшни" class="large-image w-full">
+                    <h4 class="text-xl font-semibold mt-4 text-center">Исторические конюшни</h4>
+                </div>
+                <div class="fade-in card-hover">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/4.jpg" alt="Территория" class="large-image w-full">
+                    <h4 class="text-xl font-semibold mt-4 text-center">Территория комплекса</h4>
+                </div>
+                <div class="fade-in card-hover">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/5.jpg" alt="Лошади" class="large-image w-full">
+                    <h4 class="text-xl font-semibold mt-4 text-center">Элитное коневодство</h4>
+                </div>
+                <div class="fade-in card-hover">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/6.jpg" alt="Природа" class="large-image w-full">
+                    <h4 class="text-xl font-semibold mt-4 text-center">Природное окружение</h4>
+                </div>
+                <div class="fade-in card-hover">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/concept%20plan.jpg" alt="Концепт план" class="large-image w-full">
+                    <h4 class="text-xl font-semibold mt-4 text-center">Концепт-план</h4>
+                </div>
+                <div class="fade-in card-hover">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/3d.jpg" alt="3D визуализация" class="large-image w-full">
+                    <h4 class="text-xl font-semibold mt-4 text-center">3D визуализация</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Мультифункциональный комплекс -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="heading-font text-5xl font-bold text-gray-800 mb-6">Мультифункциональный комплекс</h2>
+                    <div class="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                        Уникальное сочетание элитного отдыха, конного спорта, гастрономии и винного туризма
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="fade-in card-hover bg-gray-50 p-8 rounded-xl golden-border">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-bed text-4xl text-yellow-600 mb-4"></i>
+                            <h3 class="heading-font text-2xl font-bold">Бутик-отель</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>15 элитных номеров (50-80 м²)</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Историческая аутентичность</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Современные удобства</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Премиальное обслуживание</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>350-500€ за ночь</li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-in card-hover bg-gray-50 p-8 rounded-xl golden-border">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-horse text-4xl text-yellow-600 mb-4"></i>
+                            <h3 class="heading-font text-2xl font-bold">Конный центр</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>20 стойл для элитных лошадей</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Школа верховой езды</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Разведение элитных пород</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>VIP-стойла для гостей</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>800-1,200€/месяц за стойло</li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-in card-hover bg-gray-50 p-8 rounded-xl golden-border">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-wine-bottle text-4xl text-yellow-600 mb-4"></i>
+                            <h3 class="heading-font text-2xl font-bold">Винодельня</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Собственное производство</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Дегустационные залы</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Винные туры</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Эксклюзивные сорта</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Экспорт в Австрию</li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-in card-hover bg-gray-50 p-8 rounded-xl golden-border">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-beer text-4xl text-yellow-600 mb-4"></i>
+                            <h3 class="heading-font text-2xl font-bold">Пивоварня</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Крафтовое пиво</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Традиционные рецепты</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Пивные туры</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Seasonal collections</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Региональное распространение</li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-in card-hover bg-gray-50 p-8 rounded-xl golden-border">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-spa text-4xl text-yellow-600 mb-4"></i>
+                            <h3 class="heading-font text-2xl font-bold">СПА-центр</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Wellness-программы</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Массажные кабинеты</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Сауны и хамам</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Косметические процедуры</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>150-300€ за процедуру</li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-in card-hover bg-gray-50 p-8 rounded-xl golden-border">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-utensils text-4xl text-yellow-600 mb-4"></i>
+                            <h3 class="heading-font text-2xl font-bold">Элитный ресторан</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Авторская кухня</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Местные продукты</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Michelin-уровень</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Винная карта 500+ позиций</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>120-200€ средний чек</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-6">Event-площадки</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl mb-2">Свадебные церемонии</h4>
+                                <p class="text-gray-600">Романтические свадьбы в историческом замке с возможностью размещения до 150 гостей</p>
+                                <p class="font-semibold text-yellow-600 mt-2">15,000-25,000€ за мероприятие</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl mb-2">Корпоративные мероприятия</h4>
+                                <p class="text-gray-600">Конференции, тимбилдинги, презентации в уникальной исторической атмосфере</p>
+                                <p class="font-semibold text-yellow-600 mt-2">8,000-15,000€ за мероприятие</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-xl mb-2">Частные события</h4>
+                                <p class="text-gray-600">Дни рождения, юбилеи, семейные торжества в эксклюзивной обстановке</p>
+                                <p class="font-semibold text-yellow-600 mt-2">5,000-12,000€ за мероприятие</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-6">Ботанический сад</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                                <h4 class="font-bold text-xl mb-2 text-green-800">Фруктовые деревья</h4>
+                                <p class="text-green-700">Исторические сорта яблонь, груш, слив. Собственные фрукты для ресторана и переработки</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                                <h4 class="font-bold text-xl mb-2 text-green-800">Тюльпанные поля</h4>
+                                <p class="text-green-700">Восстановление исторических тюльпанных садов по образцу XIX века</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                                <h4 class="font-bold text-xl mb-2 text-green-800">Столетний парк</h4>
+                                <p class="text-green-700">Сохранение и развитие исторического паркового ансамбля с редкими видами деревьев</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Локация и преимущества -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #8B4513, #DAA520);">
+        <div class="container mx-auto px-6 text-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="heading-font text-5xl font-bold mb-6">Уникальная локация</h2>
+                    <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
+                    <p class="text-xl max-w-4xl mx-auto">
+                        В самом центре Европы, на границе Словении и Австрии
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    <div class="text-center fade-in">
+                        <div class="bg-white bg-opacity-20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-plane text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Грац (Австрия)</h4>
+                        <p class="text-lg">60 км</p>
+                        <p class="text-sm opacity-80">Крупный аэропорт</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="bg-white bg-opacity-20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-city text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Любляна</h4>
+                        <p class="text-lg">100 км</p>
+                        <p class="text-sm opacity-80">Столица Словении</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="bg-white bg-opacity-20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-crown text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Вена</h4>
+                        <p class="text-lg">250 км</p>
+                        <p class="text-sm opacity-80">Имперская столица</p>
+                    </div>
+                    <div class="text-center fade-in">
+                        <div class="bg-white bg-opacity-20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-water text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Триест</h4>
+                        <p class="text-lg">250 км</p>
+                        <p class="text-sm opacity-80">Итальянское побережье</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-6">Туристическая привлекательность</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-skiing text-2xl text-yellow-300 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Горнолыжные курорты</h4>
+                                    <p class="opacity-90">Мирового уровня в 30 минутах езды</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-hot-tub text-2xl text-yellow-300 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Термальные курорты</h4>
+                                    <p class="opacity-90">Известные спа-центры региона</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-wine-glass text-2xl text-yellow-300 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Винные маршруты</h4>
+                                    <p class="opacity-90">Среди волнистых виноградников</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-6">Развитие туризма</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                                <h4 class="font-bold text-lg mb-2">Австро-словенский туристический коридор</h4>
+                                <p class="opacity-90">Растущий поток туристов между двумя странами, развитие совместных маршрутов</p>
+                            </div>
+                            <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                                <h4 class="font-bold text-lg mb-2">Культурно-исторический туризм</h4>
+                                <p class="opacity-90">Интерес к австро-венгерскому наследию, рост элитного туризма в регионе</p>
+                            </div>
+                            <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                                <h4 class="font-bold text-lg mb-2">Конный туризм</h4>
+                                <p class="opacity-90">Популярность конных туров, особенно среди состоятельных европейцев</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Финансовый анализ -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="heading-font text-5xl font-bold text-gray-800 mb-6">Инвестиционная модель</h2>
+                    <div class="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600">Детальный финансовый анализ мультифункционального комплекса</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-8">Структура инвестиций</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Покупка комплекса</span>
+                                <span class="text-xl font-bold text-yellow-600">900,000€</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Реконструкция отеля</span>
+                                <span class="text-xl font-bold">1,200,000€</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Восстановление конюшен</span>
+                                <span class="text-xl font-bold">800,000€</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">СПА и ресторан</span>
+                                <span class="text-xl font-bold">600,000€</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Винодельня и пивоварня</span>
+                                <span class="text-xl font-bold">400,000€</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Благоустройство сада</span>
+                                <span class="text-xl font-bold">200,000€</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-yellow-50 p-4 rounded-lg">
+                                <span class="font-bold text-lg">ОБЩИЕ ИНВЕСТИЦИИ</span>
+                                <span class="text-2xl font-bold text-yellow-600">4,100,000€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="heading-font text-3xl font-bold mb-8">Структура доходов</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Отель (15 номеров)</span>
+                                <span class="text-xl font-bold">850,000€/год</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Конюшни (20 стойл)</span>
+                                <span class="text-xl font-bold">240,000€/год</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Ресторан</span>
+                                <span class="text-xl font-bold">420,000€/год</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">СПА-центр</span>
+                                <span class="text-xl font-bold">180,000€/год</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Event-мероприятия</span>
+                                <span class="text-xl font-bold">280,000€/год</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-3">
+                                <span class="font-semibold">Винодельня и пивоварня</span>
+                                <span class="text-xl font-bold">130,000€/год</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-green-50 p-4 rounded-lg">
+                                <span class="font-bold text-lg">ОБЩАЯ ВЫРУЧКА</span>
+                                <span class="text-2xl font-bold text-green-600">2,100,000€/год</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                    <div class="text-center fade-in bg-gray-50 p-8 rounded-xl">
+                        <div class="counter text-yellow-600" data-target="2100">0</div>
+                        <p class="text-lg font-semibold mt-2">тыс.€ выручка/год</p>
+                    </div>
+                    <div class="text-center fade-in bg-gray-50 p-8 rounded-xl">
+                        <div class="counter text-red-600" data-target="1350">0</div>
+                        <p class="text-lg font-semibold mt-2">тыс.€ расходы/год</p>
+                    </div>
+                    <div class="text-center fade-in bg-gray-50 p-8 rounded-xl">
+                        <div class="counter text-green-600" data-target="750">0</div>
+                        <p class="text-lg font-semibold mt-2">тыс.€ EBITDA/год</p>
+                    </div>
+                    <div class="text-center fade-in bg-gray-50 p-8 rounded-xl">
+                        <div class="counter text-blue-600" data-target="18">0</div>
+                        <p class="text-lg font-semibold mt-2">% годовая доходность</p>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="heading-font text-3xl font-bold mb-8 text-center">Финансовые показатели</h3>
+                    <div class="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-8 rounded-xl">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                            <div>
+                                <h4 class="text-2xl font-bold mb-2">ROI</h4>
+                                <p class="text-4xl font-bold">18.3%</p>
+                                <p class="text-sm opacity-90">Годовая доходность</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold mb-2">Окупаемость</h4>
+                                <p class="text-4xl font-bold">5.5</p>
+                                <p class="text-sm opacity-90">лет</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold mb-2">NPV (10 лет)</h4>
+                                <p class="text-4xl font-bold">2.8M€</p>
+                                <p class="text-sm opacity-90">Чистая приведенная стоимость</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Планы развития -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #F5F2E8, #FAF7F0);">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="heading-font text-5xl font-bold text-gray-800 mb-6">Планы развития</h2>
+                    <div class="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="fade-in">
+                        <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/plan1.jpg" alt="План 1" class="large-image w-full mb-4">
+                        <h4 class="text-xl font-semibold text-center">Генеральный план</h4>
+                    </div>
+                    <div class="fade-in">
+                        <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/plan2.jpg" alt="План 2" class="large-image w-full mb-4">
+                        <h4 class="text-xl font-semibold text-center">Функциональное зонирование</h4>
+                    </div>
+                    <div class="fade-in">
+                        <img src="https://raw.githubusercontent.com/miragconsulting/kapralov-grad/main/plan3.jpg" alt="План 3" class="large-image w-full mb-4">
+                        <h4 class="text-xl font-semibold text-center">Детальная планировка</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Анимация появления элементов при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Анимированные счетчики
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+
+        // Запуск счетчиков при появлении в поле зрения
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.counter').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    </script>
+</body>
+</html>
